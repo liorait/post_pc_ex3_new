@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText,ContentDescription">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineScreenQ1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineScreenQ2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineScreenQ3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <TextView
+        android:id="@+id/buttonEquals"
+        style="@style/CalculatorButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ripple_orange"
+        android:text="="
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineScreenQ3" />
+
+    <TextView
+        android:id="@+id/buttonPlus"
+        style="@style/CalculatorButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ripple_gray"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@id/buttonEquals"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineScreenQ2" />
+
+    <TextView
+        android:id="@+id/buttonMinus"
+        style="@style/CalculatorButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ripple_gray"
+        android:text="-"
+        app:layout_constraintBottom_toTopOf="@id/buttonPlus"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineScreenQ1" />
+
+    <TextView
+        android:id="@+id/buttonClear"
+        style="@style/CalculatorButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ripple_blue"
+        android:text="C"
+        app:layout_constraintBottom_toTopOf="@id/buttonMinus"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/buttonBackSpace"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ripple_gray_on_white"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="@id/backSpaceImage"
+        app:layout_constraintEnd_toEndOf="@id/backSpaceImage"
+        app:layout_constraintStart_toStartOf="@id/backSpaceImage"
+        app:layout_constraintTop_toTopOf="@id/backSpaceImage" />
+
+    <ImageView
+        android:id="@+id/backSpaceImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="4dp"
+        android:padding="24dp"
+        android:src="@drawable/ic_baseline_backspace_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/buttonEquals"
+        app:layout_constraintTop_toTopOf="@id/guidelineScreenQ3"
+        app:tint="@color/black" />
+
+    <TextView
+        android:id="@+id/button3"
+        style="@style/CalculatorButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ripple_gray_on_white"
+        android:text="3"
+        app:layout_constraintBottom_toTopOf="@id/buttonBackSpace"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/buttonBackSpace"
+        app:layout_constraintStart_toStartOf="@id/buttonBackSpace" />
+
+    <TextView
+        android:id="@+id/button6"
+        style="@style/CalculatorButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ripple_gray_on_white"
+        android:text="6"
+        app:layout_constraintBottom_toTopOf="@id/button3"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/buttonBackSpace"
+        app:layout_constraintStart_toStartOf="@id/buttonBackSpace" />
+
+    <TextView
+        android:id="@+id/button9"
+        style="@style/CalculatorButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ripple_gray_on_white"
+        android:text="9"
+        app:layout_constraintBottom_toTopOf="@id/button6"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/buttonBackSpace"
+        app:layout_constraintStart_toStartOf="@id/buttonBackSpace" />
+
+    <TextView
+        android:id="@+id/button0"
+        style="@style/CalculatorButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ripple_gray_on_white"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/buttonBackSpace"
+        app:layout_constraintTop_toTopOf="@id/guidelineScreenQ3" />
+
+    <TextView
+        android:id="@+id/button2"
+        style="@style/CalculatorButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ripple_gray_on_white"
+        android:text="2"
+        app:layout_constraintBottom_toTopOf="@id/button0"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/button0"
+        app:layout_constraintStart_toStartOf="@id/button0" />
+
+    <TextView
+        android:id="@+id/button5"
+        style="@style/CalculatorButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ripple_gray_on_white"
+        android:text="5"
+        app:layout_constraintBottom_toTopOf="@id/button2"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/button0"
+        app:layout_constraintStart_toStartOf="@id/button0" />
+
+    <TextView
+        android:id="@+id/button8"
+        style="@style/CalculatorButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ripple_gray_on_white"
+        android:text="8"
+        app:layout_constraintBottom_toTopOf="@id/button5"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/button0"
+        app:layout_constraintStart_toStartOf="@id/button0" />
+
+    <View
+        android:id="@+id/spaceBelowButton1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/button0"
+        app:layout_constraintTop_toTopOf="@id/guidelineScreenQ3" />
+
+    <TextView
+        android:id="@+id/button1"
+        style="@style/CalculatorButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ripple_gray_on_white"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@id/spaceBelowButton1"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/spaceBelowButton1"
+        app:layout_constraintStart_toStartOf="@id/spaceBelowButton1" />
+
+    <TextView
+        android:id="@+id/button4"
+        style="@style/CalculatorButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ripple_gray_on_white"
+        android:text="4"
+        app:layout_constraintBottom_toTopOf="@id/button1"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/spaceBelowButton1"
+        app:layout_constraintStart_toStartOf="@id/spaceBelowButton1" />
+
+    <TextView
+        android:id="@+id/button7"
+        style="@style/CalculatorButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ripple_gray_on_white"
+        android:text="7"
+        app:layout_constraintBottom_toTopOf="@id/button4"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/spaceBelowButton1"
+        app:layout_constraintStart_toStartOf="@id/spaceBelowButton1" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierToStartOfButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="button7,button4,button1,spaceBelowButton1" />
+
+    <TextView
+        android:id="@+id/textViewCalculatorOutput"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:ellipsize="start"
+        android:gravity="center"
+        android:textColor="#212121"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="14sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/barrierToStartOfButtons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="18+9-27+36-45+54-63+72-81" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
