@@ -1,0 +1,16 @@
+I pledge the highest level of ethical principles in support of academic excellence.  I ensure that all of my work reflects my own abilities and not those of someone else
+
+Answers to questions:
+
+If we want to add a multiplication operation, we will have to do the following:
+1. Add a TextView for the multiplication button in activity_main.xml
+2. set on click listener for the multiplication button
+3. In file 'SimpleCalculator' add the function void insertMult();
+4. In file 'SimpleCalculatorImpl' implement the function void insertMult();
+
+Tests to run on the calculator:
+in SimpleCalculatorImplTest we check that when the user presses the multiplication button, the output is multiplication sign.
+
+in AppFlowTest we test a flow of nultiplication operation for example 3*2=.
+
+in MainActivityTest add a test that checks when the multiplication button is pressed, the listener function is called and then the output is the pressed button.
